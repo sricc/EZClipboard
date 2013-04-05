@@ -1,0 +1,4 @@
+zClipboard
+==========
+
+Yii ZeroClipboard extension
