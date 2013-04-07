@@ -13,18 +13,13 @@ class zClipboard extends CWidget {
 	// The ID of the HTML element to be copied
 	public $tagId = "copy_button";
 	// ZeroClipboard options in array form (i.e. array('moviePath'=>'....'))
-	public $options = array();
+	public $zcOptions = array();
 	// Any events you want attached in array form (i.e. array('load'=>'onLoad', 'complete'=>'onComplete'))
-	public $events;
+	public $zcEvents;
 	// The data-clipboard-text that will be copied to the clipboard
 	public $clipboardText = "Text to Copy";
 	// Position of the script (Default: CClientScript::POS_BEGIN)
 	public $scriptPos = "END";
-	// Path to javascript files
-	public $jsPath;
-	// Path to swf files
-	public $swfPath;
-
 
 	// Flash file name
 	protected $swfFile = 'ZeroClipboard.swf';
@@ -77,11 +72,10 @@ class zClipboard extends CWidget {
 	 * Run the widget
 	 */
 	public function run() {
-		// $script = '$(document).ready(function() { var clip = new ZeroClipboard($(' . $this->tagId . '), ' . json_encode($this->options) . ');';
-		$this->options['moviePath'] = $this->assetPath . '/swf/' . $this->swfFile;
-		$script = "var clip = new ZeroClipboard($('#{$this->tagId}'), " . json_encode($this->options) . ");\n";
-		if (@$this->events) {
-			foreach($this->events as $event=>$function) 
+		$this->zcOptions['moviePath'] = $this->assetPath . '/swf/' . $this->swfFile;
+		$script = "var clip = new ZeroClipboard($('#{$this->tagId}'), " . json_encode($this->zcOptions) . ");\n";
+		if (@$this->zcEvents) {
+			foreach($this->zcEvents as $event=>$function) 
 				$script .= "clip.on('$event', '$function');\n";
 		}
 
