@@ -1,16 +1,16 @@
-zClipboard
+EEZClipboard
 ==========
 
 This is a ZeroClipboard extension for the Yii Framework.
 
 # Installing
 
-* Download the zClipboard zip file by clicking the ZIP button in the master repo
+* Download the EZClipboard zip file by clicking the ZIP button in the master repo
 * Unzip the file and copy it to the /protected/extensions/ directory in your Yii app
 
 # Usage
 
-	$this->widget('ext.zClipboard.zClipboard, array(
+	$this->widget('ext.EZClipboard.EZClipboard, array(
 		'tag' => 'a',
 		'tagHtmlOptions' => array('class'=>'copy-class'),
 		'tagId' => 'copy_button',
@@ -33,7 +33,7 @@ This is a ZeroClipboard extension for the Yii Framework.
 		</head>
 		<body>
 			<? 
-				$this->widget('ext.zClipboard.zClipboard, array(
+				$this->widget('ext.EZClipboard.EZClipboard, array(
 					'tagHtmlOptions' 	=> array('class'=>'copy-class'),
 					'tagId' 			=> 'copy_button',
 					'tagContent' 	 	=> "Copy Text",

@@ -1,6 +1,6 @@
 <?php
 
-class zClipboard extends CWidget {
+class EZClipboard extends CWidget {
 
 	// The tag type to use 'Defaults to button'
 	public $tag = 'button';
