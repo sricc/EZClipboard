@@ -5,7 +5,7 @@ This is a ZeroClipboard extension for the Yii Framework.
 
 # Installing
 
-* Download the zClipboard file
+* Download the zClipboard zip file by clicking the ZIP button in the master repo
 * Unzip the file and copy it to the /protected/extensions/ directory in your Yii app
 
 # Usage
