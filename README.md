@@ -38,7 +38,7 @@ This is a ZeroClipboard extension for the Yii Framework.
 					'tagId' 			=> 'copy_button',
 					'tagContent' 	 	=> "Copy Text",
 					'clipboardText'		=> 'This is the text that will be copied',
-					'events' 			=> array('load'=>'onLoad', 'complete'=>'onComplete'),
+					'zcEvents' 			=> array('load'=>'onLoad', 'complete'=>'onComplete'),
 					'scriptPos'			=> 'HEAD'
 				));
 			?>			
