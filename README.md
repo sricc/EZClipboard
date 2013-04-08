@@ -106,6 +106,6 @@ Would produce the following code:
 
 	"tagContent" => "This is the text that will be copied"
 
-**scriptPos** - the position of the scripts (Default: 'END')   
+**scriptPos** - the position of the ZeroClipboard.js script tag (Default: 'END')  
 
 	"scriptPos" => "HEAD"
