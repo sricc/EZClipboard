@@ -73,10 +73,10 @@ class zClipboard extends CWidget {
 	 */
 	public function run() {
 		$this->zcOptions['moviePath'] = $this->assetPath . '/swf/' . $this->swfFile;
-		$script = "var clip = new ZeroClipboard($('#{$this->tagId}'), " . json_encode($this->zcOptions) . ");\n";
+		$script = "var clip = new ZeroClipboard($('#{$this->tagId}'), " . json_encode($this->zcOptions) . ");";
 		if (@$this->zcEvents) {
 			foreach($this->zcEvents as $event=>$function) 
-				$script .= "clip.on('$event', '$function');\n";
+				$script .= "clip.on('$event', '$function');";
 		}
 
 		Yii::app()->clientScript->registerScript($this->id, $script, CClientScript::POS_READY);
